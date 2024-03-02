@@ -50,6 +50,9 @@ void reduceFraction(Rational& fraction){
 // Връщаме Rational&, за да можем да влагаме 
 // извикванията на addToFraction
 Rational& addToFraction(Rational& lhs, const Rational& rhs){
+     if(!isValid(lhs) || !isValid(rhs)){
+        std::cout<<"Invalid fraction! 0 in denominator!\n";
+    }
     lhs.num *= rhs.denom;
         lhs.num += rhs.num * lhs.denom;
     lhs.denom *= rhs.denom;
