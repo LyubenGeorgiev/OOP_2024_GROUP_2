@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cstring>
 
 
 enum class Degree {
@@ -46,7 +47,21 @@ void printTeacher(const Teacher &teacher) {
 }
 
 void readTeacher(Teacher &teacher) {
-    // TODO
+    int id, flunkedStudentsCount;
+    char degree[16] = {'\0',};
+
+    std::cin >> id >> degree >> flunkedStudentsCount;
+
+    Degree deg = Degree::UNKNOWN;
+    if (strcmp(degree, "bachelor") == 0) {
+        deg = Degree::BACHELOR;
+    } else if (strcmp(degree, "master") == 0) {
+        deg = Degree::MASTER;
+    } else if (strcmp(degree, "phd") == 0) {
+        deg = Degree::PHD;
+    }
+
+    initTeacher(teacher, id, deg, flunkedStudentsCount);
 }
 
 const int TEACHERS_COUNT = 10;
