@@ -101,11 +101,12 @@ void removeEdge(Graph &graph, const Edge &edge) {
         uniqueTo &= equal(graph.edges[i].from, edge.to) && equal(graph.edges[i].to, edge.to);
     }
 
-    if (removeIndex != -1) {
-        graph.edges[removeIndex] = graph.edges[graph.edgesCnt - 1];
-        --graph.edgesCnt;
-        graph.verticesCnt -= uniqueFrom + uniqueTo;
-    } else {
+    if (removeIndex == -1) {
         std::cout << "Edge to be removed was not found in graph!\n";
+        return;
     }
+
+    graph.edges[removeIndex] = graph.edges[graph.edgesCnt - 1];
+    --graph.edgesCnt;
+    graph.verticesCnt -= uniqueFrom + uniqueTo;
 }
