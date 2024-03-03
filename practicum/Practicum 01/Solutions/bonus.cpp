@@ -42,6 +42,11 @@ void pushBack(Graph &graph, const Edge &edge) {
 }
 
 void addEdge(Graph &graph, const Edge &edge) {
+    if (equal(edge.from, edge.to)) {
+        std::cout << "Edge is loop!\n";
+        return;
+    }
+
     bool uniqueFrom = true, uniqueTo = true;
     for (int i = 0; i < graph.edgesCnt && (uniqueFrom || uniqueTo); ++i) {
         if (equal(graph.edges[i], edge)) {
