@@ -146,7 +146,7 @@ write(const char* memoryBlock, size_t size);
 
 int main()
 {
-   std::ofstream f("file.dat");
+   std::ofstream f("file.dat", std::ios::binary);
 
    int a = 155555;
 
@@ -168,7 +168,7 @@ int main()
 
 int main()
 {
-  std::ifstream f("file.dat");
+  std::ifstream f("file.dat", std::ios::binary);
 
   int a;
   f.read((char*)&a, sizeof(int));

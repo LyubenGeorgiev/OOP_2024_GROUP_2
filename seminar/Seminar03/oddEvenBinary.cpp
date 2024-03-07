@@ -47,6 +47,8 @@ int main(){
     }
     //std::cout<<sizeof(arr)<<std::endl;
     file.close();
+    fileEven.close();
+    fileOdd.close();
 
     delete[] arr;
 }

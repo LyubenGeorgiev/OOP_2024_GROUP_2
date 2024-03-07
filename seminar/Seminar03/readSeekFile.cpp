@@ -44,4 +44,7 @@ int main(){
     ch = file.get();
     std::cout<< "Current Character is: " << ch << std::endl;
 
+    file.close();
+
+    return 0;
 }
