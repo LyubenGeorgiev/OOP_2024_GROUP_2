@@ -282,8 +282,11 @@ class Book{
     char name[128];
 
     // Конструктор с инициализиращ списъл
-    Book(int initYear, const char* initName = nullptr) :year(initYear),
-                                                        name(initName){} 
+    Book(int initYear, const char* initName = nullptr) : year(initYear) {
+        if (initName) {
+            strcpy(name, initName);
+        }
+    } 
 
     //Стандартен конструктор, вариант с this
     Book(int year, const char* name){
