@@ -152,5 +152,9 @@ public:
 int main(){
     A a(42);
     a << std::cout; // Outputs 42
+    n.operator<<(std::cout); // може да го напишем и така
     std::cout << a; // ERROR!
 } 
+```
+
+![crying_cat](img/crying_cat.jpg)
