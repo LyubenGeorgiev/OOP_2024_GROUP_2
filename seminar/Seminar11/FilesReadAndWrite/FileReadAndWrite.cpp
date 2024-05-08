@@ -57,14 +57,27 @@ void selectionSort(int* arr, size_t size)
 void transfer(const MyString& inFile, const MyString& outFile) {
     int* arr = nullptr;
     size_t size;
+    FileReader* reader = nullptr;
+    FileWriter* writer = nullptr;
 
-    FileReader* reader = getFileReader(inFile);
-    reader->read(arr, size);
-    selectionSort(arr, size);
+    try {
+        reader = getFileReader(inFile);
+        reader->read(arr, size);
+        selectionSort(arr, size);
 
-    FileWriter* writer = getFileWriter(outFile);
-    writer->write(arr, size);
+        writer = getFileWriter(outFile);
+        writer->write(arr, size);
+    } catch(...) {
+        delete[] arr;
+        delete reader;
+        delete writer;
+
+        throw;
+    }
+
     delete[] arr;
+    delete reader;
+    delete writer;
 }
 
 int main()
