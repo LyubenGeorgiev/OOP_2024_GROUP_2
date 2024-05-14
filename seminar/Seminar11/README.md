@@ -38,3 +38,6 @@
     
 Напишете функция, която приема произвола колекция от горните и измерва нейния performance за подадени входни данни.
 Да се направи сравнение между различните колекции.
+
+## [Куиз с въпроси от семинар 11](https://docs.google.com/forms/d/e/1FAIpQLSd2OtyAHu4IVMuUus8eoLQGXpsq5rHfotVIPBHvE2KxiejIvg/viewform)
+![happy_corgi](img/happy_corgi.jpg)
