@@ -16,4 +16,9 @@
 - ***Тема 10:*** Наследяване
 
     - [Куиз с въпроси по тема 10](https://docs.google.com/forms/d/e/1FAIpQLScLgpfwp-7KiKpOS4jsDKg24-xfB-7UKnj1aNTe4oU05FQ2Uw/viewform)
+
+- **Тема 11:** Полиморфизъм. Абстрактни класове.
+    -   - [Куиз с въпроси по тема 11](https://docs.google.com/forms/d/e/1FAIpQLSd2OtyAHu4IVMuUus8eoLQGXpsq5rHfotVIPBHvE2KxiejIvg/viewform)
+
+- **Тема 12:** Хетерогенен контейнер. Темплейти (templates)
  
